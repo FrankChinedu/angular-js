@@ -1,0 +1,27 @@
+<input type="text" ng-model="favMeat" placeholder="enter fav meat">
+<p>your fav meat us {{favMeat}}</p>
+
+<div class="content">
+
+  <div ng-controller="NinjaController">
+    <button ng-click="order = 'name'">order by name</button>
+    <button ng-click="order = 'price'">order by price</button>
+    <!-- <p>{{message}}</p>
+      <input type="text" ng-model="search">
+      <ul>
+        <li ng-repeat="f in food | orderBy: 'name' | filter: search"> {{f.name}}</li>
+      </ul> -->
+    <ul>
+      <li ng-repeat="food in foods | orderBy: order">
+        <h3>{{food.name}} - {{food.price | currency }}</h3>
+        <div class="remove" ng-click="removeFood(food)">x</div>
+      </li>
+    </ul>
+    <form ng-submit="addFood()">
+      <input type="text" placeholder="name" ng-model="newFood.name" />
+      <input type="text" placeholder="price" ng-model="newFood.price" />
+      <input type="text" placeholder="color" ng-model="newFood.color" />
+      <input type="submit" value="add new food" />
+    </form>
+  </div>
+</div>

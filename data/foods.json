@@ -1,0 +1,26 @@
+[
+  {
+    "name": "rice",
+    "color": "white",
+    "price": 40,
+    "availability": true
+  },
+  {
+    "name": "beens",
+    "color": "brown",
+    "price": 10,
+    "availability": true
+  },
+  {
+    "name": "yam",
+    "color": "white",
+    "price": 10,
+    "availability": false
+  },
+  {
+    "name": "tea",
+    "color": "green",
+    "price": 5,
+    "availability": true
+  }
+]
